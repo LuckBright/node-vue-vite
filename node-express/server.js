@@ -7,6 +7,5 @@ http.listen(port, () => {
   console.log('本地服务启动')
 })
 
-http.get('/getData', (req, res) => {
-  res.send({ data: { a: '1' }, msg: '请求成功', status: 200 })
-})
+const fileInterFace = require('./interface/fs/index')
+fileInterFace(http)
