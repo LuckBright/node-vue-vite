@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import axios from 'axios'
 import { ref } from 'vue'
-import a2 from './components/a2.jsx'
+import a1 from './components/a1.vue'
+import A1 from './components/a1.vue';
 
 const bgcColor = ref('green')
+const title = ref('i am title')
+const content = ref('i am content')
+
+
 const handleLinkNode = () => {
   // axios.get('/api/getData').then(res => {
   //   console.log('res= >>>>>>>>>', res)
@@ -16,7 +21,9 @@ const handleLinkNode = () => {
 <template>
   <button @click="handleLinkNode">测试链接后端</button>
   <div id="box"></div>
-  <a2></a2>
+  <div>{{title}}</div>
+  <div>{{content}}</div>
+  <a1 v-model:title="title" v-model:content="content" v-model.capitalize="title"></a1>
 </template>
 
 <style scoped>
