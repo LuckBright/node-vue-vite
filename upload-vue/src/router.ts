@@ -1,29 +1,21 @@
-import {
-  createRouter as _createRouter,
-  createMemoryHistory,
-  createWebHistory
-} from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
+import Home from './components/HelloWorld.vue'
+import { getChallengens } from './getChallengen'
+import About from './views/vuejsChallenges/2-ref-family.vue'
+const { challengenRouter } = getChallengens()
 
-// Auto generates routes from vue files under ./pages
-// https://vitejs.dev/guide/features.html#glob-import
-const pages = import.meta.glob('./components/*.vue')
-
-const routes = Object.keys(pages).map((path) => {
-// const name = path.match(/\.\/pages(.*)\.vue$/)[1].toLowerCase()
-// console.log(pages, name)
-  return {
+const routes = [
+  {
     path: '/',
-    component: pages[path] // () => import('./components/*.vue')
-  }
+    name: 'Home',
+    component: Home,
+  },
+  ...challengenRouter
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
 })
 
-export function createRouter() {
-  return _createRouter({
-    // use appropriate history implementation for server/client
-    // import.meta.env.SSR is injected by Vite.
-    history: import.meta.env.SSR
-      ? createMemoryHistory('/test/')
-      : createWebHistory('/test/'),
-    routes
-  })
-}
+export default router
