@@ -1,6 +1,6 @@
+// 自动导入刷题文件，并且自动生成路由
 export const getChallengens = () => {
   const pages = import.meta.glob('./views/vuejsChallenges/*.vue')
-  console.log(pages)
   let fileAry: string[] = []
   Object.keys(pages).forEach(path => {
     const fileName = path.split('/')[3].split('.')[0]

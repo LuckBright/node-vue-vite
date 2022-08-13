@@ -8,7 +8,6 @@ function useCount() {
 
   function update(value: number) {
     state.count = value
-    console.log(state.count)
   }
 
   return {
