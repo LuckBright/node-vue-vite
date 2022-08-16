@@ -14,6 +14,7 @@ watch(state, () => {
 */
 state.value = { count: 2 }
 
+
 </script>
 
 <template>
