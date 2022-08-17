@@ -1,5 +1,5 @@
 // 自动导入刷题文件，并且自动生成路由
-export const getChallengens = () => {
+export const getChallengens = (): any => {
   const pages = import.meta.glob('./views/vuejsChallenges/*.vue')
   let fileAry: string[] = []
   Object.keys(pages).forEach(path => {
@@ -12,7 +12,7 @@ export const getChallengens = () => {
   fileAry.forEach(path => {
     challengenRouter.push({
       path: `/${path}`,
-      name: path.split('-').join('').charAt(0),
+      name: path.split('-').join('').charAt(0) + path.substring(1),
       component: pages[`./views/vuejsChallenges/${path}.vue`],
       redirect: ''
     })
