@@ -1,0 +1,24 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "自动脚手架拉取vue-challengen项目的题目",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "cli": "node ./build/index.js create"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.1"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.38",
+    "commander": "^9.2.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "8.2.2",
+    "axios": "^0.27.2",
+    "kolorist": "^1.5.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
