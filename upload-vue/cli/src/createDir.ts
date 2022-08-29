@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { resolve } from 'path'
-import { ensureDirSync } from 'fs-extra'
 import { createTemp } from './creaTemplate'
 import { lightBlue, red } from 'kolorist'
 import { onCreate } from './create'
