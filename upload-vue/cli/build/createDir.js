@@ -66,7 +66,7 @@ var createDir = function (name) { return __awaiter(void 0, void 0, void 0, funct
                         name = isFindFileContent.name;
                         tmplDir = (0, path_1.resolve)('../src/views/vuejsChallenges');
                         (0, creaTemplate_1.createTemp)(tmplDir, name, 'App');
-                        console.log((0, kolorist_1.lightBlue)("\n            \u2714\uFE0F \u9898\u76EE" + name + "\u521B\u5EFA\u6210\u529F\n          "));
+                        console.log((0, kolorist_1.lightBlue)("\n            \u2714\uFE0F \u9898\u76EE".concat(name, "\u521B\u5EFA\u6210\u529F\n          ")));
                     }
                     else {
                         // 不存在则可能没找到  重新创建
@@ -84,6 +84,6 @@ var createDir = function (name) { return __awaiter(void 0, void 0, void 0, funct
 }); };
 exports.createDir = createDir;
 var aFreshCreate = function (name) {
-    console.log((0, kolorist_1.red)("\u9898\u76EE" + name + "\u53EF\u80FD\u6CA1\u6709\u627E\u5230"));
+    console.log((0, kolorist_1.red)("\u9898\u76EE".concat(name, "\u53EF\u80FD\u6CA1\u6709\u627E\u5230")));
     return (0, create_1.onCreate)();
 };

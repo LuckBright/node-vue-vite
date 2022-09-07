@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -94,7 +98,7 @@ var onCreate = function (arg) {
                             {
                                 name: "name",
                                 type: "input",
-                                message: (0, kolorist_1.red)("\u00D7\u9898\u76EE" + name + "\u5DF2\u7ECF\u88AB\u521B\u5EFA\uFF0C \u8BF7\u91CD\u65B0\u8F93\u5165")
+                                message: (0, kolorist_1.red)("\u00D7\u9898\u76EE".concat(name, "\u5DF2\u7ECF\u88AB\u521B\u5EFA\uFF0C \u8BF7\u91CD\u65B0\u8F93\u5165"))
                             }
                         ])];
                 case 4:

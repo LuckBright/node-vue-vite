@@ -52,7 +52,7 @@ var createTemp = function (tmplDir, name, file) { return __awaiter(void 0, void 
             case 0:
                 _a.trys.push([0, 2, , 3]);
                 return [4 /*yield*/, (0, axios_1["default"])({
-                        url: "/repos/webfansplz/vuejs-challenges/contents/questions/" + name + "/" + file + ".vue",
+                        url: "/repos/webfansplz/vuejs-challenges/contents/questions/".concat(name, "/").concat(file, ".vue"),
                         method: "get",
                         headers: {
                             accept: "application/vnd.github.v3.raw"
@@ -60,7 +60,7 @@ var createTemp = function (tmplDir, name, file) { return __awaiter(void 0, void 
                     })];
             case 1:
                 res = _a.sent();
-                tmplFilePath = (0, path_1.resolve)(tmplDir, name + ".vue");
+                tmplFilePath = (0, path_1.resolve)(tmplDir, "".concat(name, ".vue"));
                 (0, fs_extra_1.writeFileSync)(tmplFilePath, res.data, WRITE_FILE_OPTIONS);
                 return [3 /*break*/, 3];
             case 2:
